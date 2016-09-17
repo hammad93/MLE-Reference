@@ -47,4 +47,5 @@ def numpy_dot():
             'points': Series(numpy.dot([4, 2, 1], [gold, silver, bronze]))}
             
     olympic_points_df = DataFrame(data)
+    
     return olympic_points_df

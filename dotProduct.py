@@ -31,7 +31,7 @@ def numpy_dot():
  
     #Hammad Usmani
     '''
-    The Dot 
+    The Dot Product: 
     '''
     
     return #olympic_points_df

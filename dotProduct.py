@@ -31,7 +31,20 @@ def numpy_dot():
  
     #Hammad Usmani
     '''
-    The Dot Product: 
-    '''
+    To find the dot product:
+    Value Matrix: [4, 2, 1]
+    Result Matrix: [Country 1, Country 2, Country 3, ... Country n]
+    Score Matrix: [[gold],[silver],[bronze]]
+    Score dot Value = Result
     
-    return #olympic_points_df
+    numpy.dot([4, 2, 1], [gold, silver, bronze])
+    
+    1) Conduct proper matrix multuplication to obtain a list of sums corresponding to the countries
+    2) numpy.dot will return a series
+    3) Create dataframe based on paramters
+    '''
+    data = {'country_name': Series(countries),
+            'points': Series(numpy.dot([4, 2, 1], [gold, silver, bronze]))}
+            
+    olympic_points_df = DataFrame(data)
+    return olympic_points_df

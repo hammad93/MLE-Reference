@@ -71,3 +71,21 @@ for i in enron_data:
         emailCount+=1
 
 print "# Quanitified salary: ", salaryCount, " # valid email: ", emailCount
+
+"""
+How many people in the E+F dataset (as it currently exists) have NaN for their total payments? What percentage of people in the dataset as a whole is this?
+"""
+totalPaymentCount = 0
+for i in enron_data:
+    if (enron_data[i]["total_payments"] == "NaN"):
+        totalPaymentCount += 1
+print "# NaN for total payments: ", totalPaymentCount, " as percentage: ", ((float(totalPaymentCount) / (len(enron_data.keys()))) * 100), "%"
+#note that for the percentage, we convert the type of totalPaymentCount to float to make a float division under Python 2.X
+"""
+How many POIs in the E+F dataset have NaN for their total payments? What percentage of POIs as a whole is this?
+"""
+poiPaymentCount = 0
+for i in enron_data:
+    if (enron_data[i]["poi"] == 1 and enron_data[i]["total_payments"] == "NaN" ):
+        poiPaymentCount += 1
+print "# POI & NaN for total payments: ", poiPaymentCount, " as percentage: ", ((float(poiPaymentCount) / (len(enron_data.keys()))) * 100), "%"

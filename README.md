@@ -1,5 +1,7 @@
 # MLE-Reference
+
 ### Running remote jupyter notebook using Cloud 9
+
 * updated 12/19/16 *
 
 1) Download proper libraries. Miniconda (http://conda.pydata.org/miniconda.html) is a good choice because its small

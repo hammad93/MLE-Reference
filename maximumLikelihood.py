@@ -24,28 +24,11 @@ def NextWordProbability(sampletext,word):
     #Construct dictionary
     result = dict()
     
-    #Find the index of `word`
-    index = 0
-    while (index < len(words)) :
-        if words[index] == word :
-            break #found `word`
-        index += 1 
-    
-    #Construct keys and their values according to problem
+    #Iterate through text and calculate based on problem
     for i, key in enumerate(words) :
-        #Skip until we're at the index after `word`
-        if i < (index + 1) :
-            continue
-        #Construct the key
-        if words[i] not in result :
-            #count the number of times it occurs after `word`
-            count = 1
-            pivot = i
-            while (pivot < len(words)) :
-                if words[pivot] == words[i] :
-                    count += 1
-                pivot += 1
-            #Save count
-            result[key] = count
-    
+        if key == word :
+            if words[i + 1] in result :
+                result[words[i + 1]] += 1
+            else :
+                result[words[i + 1]] = 1
     return result

@@ -1,3 +1,4 @@
+#Reference from Udacity Machine Learning Engineering course
 def studentReg(ages_train, net_worths_train):
     ### import the sklearn regression module, create, and train your regression
     from sklearn import linear_model

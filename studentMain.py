@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# Hammad Usmani
 
 import numpy
 import matplotlib
